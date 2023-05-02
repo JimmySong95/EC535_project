@@ -1,3 +1,11 @@
-## This is the Bu EC535 lab5 project 
+This is the Bu EC535 lab5 project 
 
 This report presents the design and implementation of a custom Linux kernel module for a framebuffer-based screensaver. The screensaver displays the letters "BU" on the screen and moves them horizontally, bouncing off the screen edges. The module also sets up an input event handler to reset the screensaver's 15-second timer when an input event occurs. The project demonstrates the use of various Linux kernel APIs, such as framebuffer operations, input event handling, timers, and character device registration. The implemented screensaver operates efficiently, being activated after 15 seconds of inactivity and resetting upon any input event detection.
+
+To run:
+* source /ad/eng/courses/ec/ec535/bashrc_ec535 make the scouce file and put the .ko file to root diretory 
+* set up the device and the serial console
+* press-and-hold the S2 button9 before, during, and for the first 3 seconds after connecting the AC/DC power adapter to the jack on the BeagleBone labeled 5V.
+* mknod /dev/myscreensaver c 61 0
+* insmod /root/myscreensaver.ko
+
